@@ -1,0 +1,167 @@
+/* styles.css */
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f2f6ff;
+  background-image: url('https://www.transparenttextures.com/patterns/white-wall-3.png');
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(to right, #f72585, #7209b7);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Banner Styling */
+#mainHeader {
+  background: linear-gradient(135deg, #3a0ca3, #4361ee);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+/* Event Card Styling */
+.eventCard {
+  background-color: #ffffff;
+  border-left: 5px solid #ffb703;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.eventCard:hover {
+  transform: scale(1.02);
+}
+
+.eventCard h3 {
+  background: linear-gradient(to right, #ff6b6b, #feca57);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.eventCard p {
+  margin-top: 10px;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Lists */
+.eventList {
+  list-style-type: circle;
+  list-style-position: inside;
+  padding-left: 20px;
+}
+
+.eventList li {
+  margin: 8px 0;
+  color: #34495e;
+  padding-left: 10px;
+}
+
+/* Highlight Class */
+.highlight {
+  background-color: #caffbf;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Form Section */
+form {
+  background-color: #fff0f3;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0077b6;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #6a4c93;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .eventCard {
+    margin: 10px;
+  }
+}

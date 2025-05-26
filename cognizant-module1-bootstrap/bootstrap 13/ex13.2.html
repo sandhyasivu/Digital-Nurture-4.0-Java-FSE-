@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 13.2 - Dark Gradient Background</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="container my-5">
+
+    <header class="mb-5 text-center text-white">
+      <h1>Dark Gradient Dashboard Panel</h1>
+      <p class="lead text-white-50">Using <code>bg-dark</code>, <code>bg-gradient</code>, and white text</p>
+    </header>
+
+    <section class="p-4 p-md-5 bg-dark bg-gradient rounded shadow">
+
+      <div class="row mb-4">
+        <div class="col-md-8">
+          <h2>Server Status</h2>
+          <p class="lead text-white-75">
+            Monitor your server health and metrics in a sleek dark gradient panel.
+          </p>
+        </div>
+        <div class="col-md-4 d-flex align-items-center justify-content-md-end">
+          <button class="btn btn-outline-light me-2">Restart Server</button>
+          <button class="btn btn-light">Update</button>
+        </div>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="card bg-secondary bg-gradient text-white shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">CPU Usage</h5>
+              <p class="card-text display-4 fw-bold">45%</p>
+              <div class="progress" style="height: 8px;">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card bg-secondary bg-gradient text-white shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Memory Usage</h5>
+              <p class="card-text display-4 fw-bold">62%</p>
+              <div class="progress" style="height: 8px;">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 62%;" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card bg-secondary bg-gradient text-white shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Disk Space</h5>
+              <p class="card-text display-4 fw-bold">80%</p>
+              <div class="progress" style="height: 8px;">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="my-4 border-light opacity-50" />
+
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Recent Alerts</h4>
+          <ul class="list-group list-group-flush rounded overflow-hidden">
+            <li class="list-group-item bg-dark text-warning d-flex justify-content-between align-items-center">
+              High CPU Usage <span class="badge bg-warning text-dark rounded-pill">Critical</span>
+            </li>
+            <li class="list-group-item bg-dark text-info d-flex justify-content-between align-items-center">
+              Scheduled Backup Complete <span class="badge bg-info text-dark rounded-pill">Info</span>
+            </li>
+            <li class="list-group-item bg-dark text-danger d-flex justify-content-between align-items-center">
+              Disk Space Low <span class="badge bg-danger text-white rounded-pill">Warning</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h4>Quick Actions</h4>
+          <div class="d-grid gap-3">
+            <button class="btn btn-outline-light btn-lg">Run Diagnostics</button>
+            <button class="btn btn-outline-warning btn-lg">Clear Cache</button>
+            <button class="btn btn-outline-danger btn-lg">Emergency Shutdown</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="mt-5 text-center text-white-50">
+      <small>&copy; 2025 Dark Gradient Dashboard &mdash; <a href="#" class="text-white-50 text-decoration-underline">Privacy</a> | <a href="#" class="text-white-50 text-decoration-underline">Terms</a></small>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

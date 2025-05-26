@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 18.1 - Bootstrap Modal Popup</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex: 1 0 auto;
+      padding: 3rem 2rem;
+      max-width: 720px;
+      margin: auto;
+    }
+    header {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 class="display-5 text-primary">Bootstrap 5 Modal Popup Demo</h1>
+  <p class="lead">Click the button below to launch a modal window.</p>
+</header>
+
+<main>
+
+  <div class="text-center mb-5">
+    <button type="button" class="btn btn-lg btn-success" data-bs-toggle="modal" data-bs-target="#infoModal">
+      Launch Info Modal
+    </button>
+  </div>
+
+  <section>
+    <h3>About Our Service</h3>
+    <p>
+      Our platform offers state-of-the-art solutions to boost your business productivity. 
+      We value your feedback and strive to deliver an intuitive experience.
+    </p>
+    <p>
+      Explore the modal popup by clicking the button above to get important info without navigating away.
+    </p>
+  </section>
+
+  <section class="mt-4">
+    <h3>Features</h3>
+    <ul class="list-group list-group-flush shadow-sm">
+      <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Responsive Design</li>
+      <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Fast Performance</li>
+      <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>24/7 Support</li>
+      <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i>Easy Integration</li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- Modal -->
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow-lg">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="infoModalLabel">Important Information</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Thank you for your interest in our services! This modal popup provides you with quick information 
+          without interrupting your browsing experience. You can close this window anytime using the X button or outside click.
+        </p>
+        <p>
+          If you have questions, please contact our support team or check the FAQ section on our website.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="#" class="btn btn-primary">Visit FAQ</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Bundle JS (includes Popper for tooltips, modals) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Bootstrap Icons CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Registration</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #confirmationMessage {
+      display: none;
+      color: green;
+      font-weight: bold;
+    }
+    #eventCard {
+      padding: 20px;
+      border: 1px solid #ccc;
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="eventCard">
+  <h2>Community Event</h2>
+  <p>Date: June 5, 2025</p>
+  <button id="registerBtn">Register</button>
+</div>
+
+<div id="confirmationMessage">
+  Thank you for registering! We will contact you soon.
+</div>
+
+<script>
+  $(document).ready(function() {
+    // When the register button is clicked
+    $('#registerBtn').click(function() {
+      // Disable the button to prevent multiple clicks
+      $(this).prop('disabled', true).text('Registering...');
+
+      // Fade out the event card over 600 milliseconds
+      $('#eventCard').fadeOut(600, function() {
+        // After fade out completes, fade in the confirmation message over 600 milliseconds
+        $('#confirmationMessage').fadeIn(600);
+      });
+    });
+
+    // Optional: When confirmation message is clicked, reset to original state
+    $('#confirmationMessage').click(function() {
+      $(this).fadeOut(600, function() {
+        $('#registerBtn').prop('disabled', false).text('Register');
+        $('#eventCard').fadeIn(600);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

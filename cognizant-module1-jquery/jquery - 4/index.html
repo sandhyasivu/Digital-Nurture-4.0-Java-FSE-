@@ -1,0 +1,74 @@
+<!-- Exercise 4: jQuery DOM Manipulation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 4: DOM Manipulation</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fcfdfd;
+      padding: 40px;
+      text-align: center;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 250px;
+      font-size: 1rem;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      margin-left: 10px;
+      border: none;
+      background-color: #3498db;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+    }
+    li {
+      background: #f1f1f1;
+      padding: 10px;
+      margin: 5px auto;
+      width: 300px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>📝 Task List Manager</h1>
+  <div>
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button id="addTask">Add Task</button>
+    <button id="clearTasks" style="background-color:#e74c3c;">Remove All</button>
+  </div>
+
+  <ul id="taskList"></ul>
+
+  <script>
+    $(document).ready(function () {
+      $("#addTask").click(function () {
+        let task = $("#taskInput").val().trim();
+        if (task) {
+          $("#taskList").append("<li>" + task + "</li>");
+          $("#taskInput").val("");
+        }
+      });
+
+      $("#clearTasks").click(function () {
+        $("#taskList").empty();
+      });
+    });
+  </script>
+</body>
+</html>

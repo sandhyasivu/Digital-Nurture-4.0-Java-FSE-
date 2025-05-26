@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 17.2 - Icon-Only Buttons</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      background: #f0f4f8;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex-grow: 1;
+      padding: 3rem 2rem;
+      max-width: 720px;
+      margin: auto;
+      text-align: center;
+    }
+    .btn-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      padding: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0.6rem;
+      transition: background-color 0.3s ease;
+    }
+    .btn-icon:hover {
+      filter: brightness(85%);
+    }
+    .btn-icon:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.5);
+    }
+    .btn-primary {
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+    }
+    .btn-success {
+      background-color: #198754;
+      color: white;
+      border: none;
+    }
+    .btn-danger {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+    }
+    .btn-warning {
+      background-color: #ffc107;
+      color: #212529;
+      border: none;
+    }
+    .btn-info {
+      background-color: #0dcaf0;
+      color: #212529;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <h1 class="mb-4 text-primary">Icon-Only Buttons with Bootstrap Icons</h1>
+    <p class="lead mb-5">
+      Buttons replaced with icons for a clean and compact UI.<br />
+      Hover or focus the buttons to see tooltips.
+    </p>
+
+    <div>
+      <button type="button" class="btn btn-primary btn-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Add New">
+        <i class="bi bi-plus-lg"></i>
+      </button>
+
+      <button type="button" class="btn btn-success btn-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Save Changes">
+        <i class="bi bi-save"></i>
+      </button>
+
+      <button type="button" class="btn btn-danger btn-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete Item">
+        <i class="bi bi-trash"></i>
+      </button>
+
+      <button type="button" class="btn btn-warning btn-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Warning">
+        <i class="bi bi-exclamation-triangle"></i>
+      </button>
+
+      <button type="button" class="btn btn-info btn-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Information">
+        <i class="bi bi-info-circle"></i>
+      </button>
+    </div>
+
+    <section class="mt-5 text-start">
+      <h3>Contextual Icon Buttons</h3>
+      <p>
+        Each button uses Bootstrap contextual colors and icons to represent actions clearly.
+        Tooltips provide accessibility and context on hover and keyboard focus.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+
+        <button type="button" class="btn btn-primary btn-icon" data-bs-toggle="tooltip" title="Edit">
+          <i class="bi bi-pencil"></i>
+        </button>
+
+        <button type="button" class="btn btn-secondary btn-icon" data-bs-toggle="tooltip" title="Settings">
+          <i class="bi bi-gear"></i>
+        </button>
+
+        <button type="button" class="btn btn-dark btn-icon" data-bs-toggle="tooltip" title="Lock">
+          <i class="bi bi-lock"></i>
+        </button>
+
+        <button type="button" class="btn btn-light btn-icon border" data-bs-toggle="tooltip" title="Refresh">
+          <i class="bi bi-arrow-clockwise"></i>
+        </button>
+
+        <button type="button" class="btn btn-danger btn-icon" data-bs-toggle="tooltip" title="Logout">
+          <i class="bi bi-box-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Enable Bootstrap tooltips globally
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    tooltipTriggerList.forEach(t => new bootstrap.Tooltip(t))
+  </script>
+</body>
+</html>

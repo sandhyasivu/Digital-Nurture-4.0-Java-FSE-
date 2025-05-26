@@ -1,0 +1,149 @@
+<!-- Exercise 10: Responsive Web Design with Media Queries -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Web Design</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+      padding: 2vh 4vw;
+    }
+
+    header {
+      background: #007BFF;
+      color: white;
+      padding: 2vh 2vw;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #333;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      display: block;
+    }
+
+    nav a:hover {
+      background: #555;
+    }
+
+    .main-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2vw;
+      margin-top: 4vh;
+    }
+
+    .card {
+      background: white;
+      padding: 2vh 2vw;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    .card img {
+      width: 100%;
+      max-height: 40vh;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 2vw;
+    }
+
+    .card p {
+      font-size: 1vw;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2vh;
+      margin-top: 5vh;
+      font-size: 1vw;
+      color: #555;
+    }
+
+    /* Media Query for devices smaller than 768px */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        padding: 0.8rem;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #444;
+      }
+
+      .main-content {
+        grid-template-columns: 1fr;
+      }
+
+      .card h3 {
+        font-size: 1.2rem;
+      }
+
+      .card p, footer {
+        font-size: 1rem;
+      }
+
+      .card img {
+        max-height: 30vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌐 Local Community Portal</h1>
+    <p>Connecting People. Sharing Events.</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Events</a>
+    <a href="#">Gallery</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section class="main-content">
+    <div class="card">
+      <img src="clean.jpg" alt="Event 1">
+      <h3>Annual Cleanup Drive</h3>
+      <p>Volunteers came together to clean parks and public spaces in a successful community-driven initiative.</p>
+    </div>
+    <div class="card">
+      <img src="foodfestival.jpg" alt="Event 2">
+      <h3>Food Fest 2025</h3>
+      <p>Over 50 food stalls showcased cuisines from around the world, attracting thousands of visitors this spring.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Local Community Portal. Designed with 💖 by Sandhiya.
+  </footer>
+</body>
+</html>

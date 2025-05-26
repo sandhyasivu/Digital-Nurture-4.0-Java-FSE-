@@ -1,0 +1,92 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 40px;
+  background: #f0f4f8;
+  color: #333;
+}
+h2 {
+  text-align: center;
+  color: #34495e;
+}
+form {
+  max-width: 480px;
+  margin: 0 auto;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #2980b9;
+  outline: none;
+  background-color: #eaf4fd;
+}
+button {
+  margin-top: 20px;
+  background-color: #2980b9;
+  color: white;
+  padding: 12px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #1c5980;
+}
+#confirmation {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #27ae60;
+  text-align: center;
+}
+#phoneError {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+#eventFee {
+  margin-top: 8px;
+  font-weight: 600;
+  color: #2980b9;
+}
+#charCount {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  color: #555;
+}
+img#eventImage {
+  display: block;
+  margin: 25px auto;
+  width: 200px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+img#eventImage.enlarged {
+  transform: scale(2);
+  z-index: 10;
+  position: relative;
+}

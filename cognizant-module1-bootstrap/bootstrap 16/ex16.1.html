@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 16.1 - Fixed Footer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    main {
+      padding-bottom: 80px; /* give space for footer */
+    }
+    footer.fixed-footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #343a40;
+      color: white;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      box-shadow: 0 -3px 8px rgba(0,0,0,0.3);
+      z-index: 1030; /* above content */
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container my-5">
+    <h1 class="mb-4">Bootstrap Fixed Footer Example</h1>
+    <p>
+      Scroll this page to see how the footer remains fixed at the bottom of the viewport.
+      The main content has padding at the bottom so it doesn’t get hidden behind the footer.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat diam sed tortor sagittis, non cursus ligula efficitur. 
+      Mauris feugiat risus sed sem commodo, at tristique odio tempor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+    </p>
+    <p>
+      (Add more content here to enable scrolling and demonstrate the fixed footer.)
+    </p>
+    <div style="height: 800px;"></div> <!-- for scroll demo -->
+  </main>
+
+  <footer class="fixed-footer">
+    &copy; 2025 YourCompany | Fixed Footer using <code>position-fixed bottom-0</code>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

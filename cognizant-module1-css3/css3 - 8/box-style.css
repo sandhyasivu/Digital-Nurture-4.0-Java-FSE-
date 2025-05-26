@@ -1,0 +1,145 @@
+
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #fff3e0);
+  color: #333;
+  padding: 20px;
+}
+
+/* Header Section */
+header {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Event Cards */
+.eventCard {
+  background: #fff;
+  border: 3px dotted #9c27b0;
+  padding: 25px;
+  margin: 25px 0;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.eventCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.eventCard h2 {
+  color: #8e24aa;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.eventCard p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Register Section */
+form {
+  background: linear-gradient(to right, #e1bee7, #f8bbd0);
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 40px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+form h2 {
+  color: #4a148c;
+  margin-bottom: 20px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 10px;
+  border: 2px solid #ba68c8;
+  outline: none;
+  font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 3px solid #ce93d8;
+  background-color: #f3e5f5;
+}
+
+/* Buttons */
+button {
+  padding: 12px 25px;
+  background: #ab47bc;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #8e24aa;
+}
+
+/* Visibility Demo */
+#hiddenBox {
+  background: #ffcdd2;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 15px;
+  border: 2px dashed #c62828;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.none {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .eventCard h2 {
+    font-size: 1.3rem;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  input, select, textarea {
+    font-size: 0.95rem;
+  }
+}

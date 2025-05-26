@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>✨ Event Showcase - Box Model Demo</title>
+  <link rel="stylesheet" href="box-style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <script>
+    function toggleVisibility(id, mode) {
+      const el = document.getElementById(id);
+      if (mode === 'visibility') {
+        el.style.visibility = el.style.visibility === 'hidden' ? 'visible' : 'hidden';
+      } else if (mode === 'display') {
+        el.style.display = el.style.display === 'none' ? 'block' : 'none';
+      }
+    }
+  </script>
+</head>
+<body>
+  <header class="main-header">
+    <h1>🎁 Box Model & Layout Control</h1>
+    <p>Explore margins, paddings, borders, outlines, and visibility</p>
+  </header>
+
+  <section class="events-section">
+    <div class="eventCard">
+      <div class="eventIcon">📌</div>
+      <div class="eventContent">
+        <h2>Community Yoga Day</h2>
+        <p>Relax and rejuvenate with guided yoga sessions for all age groups.</p>
+        <button class="join-btn">Join Now</button>
+      </div>
+    </div>
+
+    <div class="eventCard">
+      <div class="eventIcon">🎨</div>
+      <div class="eventContent">
+        <h2>Art Exhibition</h2>
+        <p>Enjoy creativity through paintings, sculptures, and interactive art.</p>
+        <button class="join-btn">Visit Gallery</button>
+      </div>
+    </div>
+
+    <div class="eventCard">
+      <div class="eventIcon">🎶</div>
+      <div class="eventContent">
+        <h2>Music Carnival</h2>
+        <p>Live performances and musical workshops to ignite your soul!</p>
+        <button class="join-btn">Get Tickets</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <h2>🏨 Register for an Event</h2>
+    <form class="registerForm">
+      <label>Name:<br><input type="text" class="outline-highlight"></label><br><br>
+      <label>Email:<br><input type="email" class="outline-highlight"></label><br><br>
+      <label>Select Event:<br>
+        <select class="outline-highlight">
+          <option>Yoga Day</option>
+          <option>Art Exhibition</option>
+          <option>Music Carnival</option>
+        </select>
+      </label><br><br>
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <section class="visibility-demo">
+    <h2>🔍 Visibility vs Display</h2>
+    <p id="visibilityText">This text can be toggled using visibility or display.</p>
+    <button onclick="toggleVisibility('visibilityText', 'visibility')">Toggle Visibility</button>
+    <button onclick="toggleVisibility('visibilityText', 'display')">Toggle Display</button>
+  </section>
+
+  <footer class="main-footer">
+    <p>© 2025 Designed by Sandhiya ✨</p>
+  </footer>
+</body>
+</html>

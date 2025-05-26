@@ -1,0 +1,33 @@
+/* styles.css */
+
+/* External Styles for Reusability */
+
+/* Event Section Styles */
+.eventTitle {
+  font-size: 1.8rem;
+  color: #333;
+  margin-top: 30px;
+}
+
+.eventList {
+  list-style-type: square;
+  color: #444;
+  padding-left: 20px;
+}
+
+/* Reuse this class across sections */
+.highlight {
+  border-radius: 4px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive Tweaks */
+@media screen and (max-width: 600px) {
+  header, footer {
+    font-size: 14px;
+  }
+  .eventTitle {
+    font-size: 1.5rem;
+  }
+}

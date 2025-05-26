@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Local JS Plugin Demo</title>
+  <!-- Local Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container text-center my-5">
+    <h1 class="text-success"> Bootstrap Local JS Plugins</h1>
+    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demoCollapse">
+      Toggle Collapse
+    </button>
+    <div id="demoCollapse" class="collapse mt-3">
+      <div class="card card-body">
+        🎉 This content is controlled by Bootstrap’s JS via bootstrap.bundle.min.js!
+      </div>
+    </div>
+  </div>
+
+  <!-- Local Bootstrap JS Bundle (includes Popper) -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

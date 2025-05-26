@@ -1,0 +1,139 @@
+<!-- Exercise 9: CSS3 Multi-Column Layout - Newspaper Style (200+ LOC) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Bulletin - Multi-Column Layout</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to right, #f9f9f9, #e8f0f8);
+      padding: 40px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 50px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.1);
+    }
+
+    .headline {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .subheading {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .columns {
+      column-count: 2;
+      column-gap: 30px;
+      column-rule: 1px solid gray;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .columns p::first-line {
+      font-weight: bold;
+      color: #2a7faa;
+    }
+
+    .columns p::first-letter {
+      font-size: 2rem;
+      float: left;
+      line-height: 1;
+      padding-right: 6px;
+      color: #c0392b;
+    }
+
+    .quote {
+      font-style: italic;
+      margin: 30px 0;
+      padding: 15px;
+      background: #f9f9f9;
+      border-left: 5px solid #aaa;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #34495e;
+      margin: 20px 0 10px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 50px;
+      color: #666;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+    }
+
+    .author-note {
+      font-size: 0.95rem;
+      color: #444;
+      margin-top: 40px;
+      padding: 15px;
+      background-color: #e3f2fd;
+      border-left: 4px solid #2196f3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="headline">📰 Community News Bulletin</div>
+    <div class="subheading">Updates from your local council • May 2025 Edition</div>
+
+    <div class="columns">
+      <p>This past weekend, the city held its biggest-ever Spring Festival. The streets of the central district were filled with colors, sounds, and the aromas of traditional cuisine as locals celebrated the spirit of togetherness.</p>
+
+      <p>Over 2,000 residents participated in activities ranging from folk dance to sustainable gardening workshops. According to organizers, this year's event exceeded all expectations and drew record-breaking attendance from neighboring towns as well.</p>
+
+      <p class="quote">“I've never seen our community so alive. It’s moments like these that truly bring us together.” – Lakshmi Rao, Festival Volunteer</p>
+
+      <p>Security was managed flawlessly by the local police department and student volunteers, ensuring the entire event remained peaceful and enjoyable. Environmental activists applauded the plastic-free initiative, as vendors used eco-friendly packaging throughout the festival grounds.</p>
+
+      <h4 class="section-title">🌿 Green Drive Launch</h4>
+      <p>In other news, the council launched its Green Drive initiative, which encourages citizens to grow their own vegetables and plant native trees in their neighborhoods. Interested participants can register online or visit the council office on weekdays.</p>
+
+      <p>Children from several schools have already signed up to lead the awareness program, organizing street plays and clean-up drives in parks and public areas.</p>
+
+      <p>Along with these efforts, the council announced the building of five new composting units across residential blocks, aiming to reduce landfill waste by 30% this year alone.</p>
+
+      <h4 class="section-title">📚 Digital Library Movement</h4>
+      <p>The community library has gone digital! A new section of e-books, video tutorials, and competitive exam resources is now available to all members through the SmartLibrary app. Memberships are being offered at discounted rates for students this summer.</p>
+
+      <p class="quote">“This is the future of education. We’re not just giving access; we’re giving opportunity.” – Dev Kumar, Education Officer</p>
+
+      <p>Events for kids, including storytelling contests and live puppet shows, will be held every Saturday to promote reading habits among the younger audience.</p>
+
+      <h4 class="section-title">🎨 Upcoming Cultural Carnival</h4>
+      <p>Don’t miss the Cultural Carnival scheduled for the second week of June. It will feature traditional dances, musical bands, street food contests, and talent shows from different parts of the region. Registration for stalls and performances closes by May 30.</p>
+
+      <p>For full event details and to sign up as a volunteer or participant, visit the official community portal or scan the QR code on our posters placed throughout the city.</p>
+    </div>
+
+    <div class="author-note">
+      ✍️ <strong>Author's Note:</strong> If you have a story to share, an achievement to celebrate, or a voice to raise — we’d love to hear from you. Submit your content for the next issue via bulletin@localcouncil.gov
+    </div>
+
+    <div class="footer">
+      &copy; 2025 Local Community Council • Designed with ❤️ by Sandhiya • www.localcouncil.gov
+    </div>
+  </div>
+</body>
+</html>

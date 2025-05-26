@@ -1,0 +1,91 @@
+/* Typography and General Styling */
+
+/* Base body styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f7f8;
+  margin: 0;
+  padding: 0 1.5rem;
+}
+
+/* Header styling */
+header h1 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #2c3e50;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+/* Header subtitle */
+header p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: rgba(44, 62, 80, 0.8);
+  letter-spacing: 0.8px;
+  line-height: 1.5;
+}
+
+/* Section headers */
+section h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #2980b9, #6dd5fa);
+  
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+/* Event card titles */
+.eventCard h3 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  color: #34495e;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.7px;
+}
+
+/* Event card details */
+.eventCard p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #555;
+  line-height: 1.4;
+  letter-spacing: 0.4px;
+}
+
+/* Paragraphs inside sections */
+section p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.25rem;
+  text-align: justify;
+}
+
+/* Footer text */
+footer p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(44, 62, 80, 0.7);
+  text-align: center;
+  letter-spacing: 0.6px;
+  margin: 0.5rem 0;
+}

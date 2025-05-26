@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Handling</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .event-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      width: 300px;
+    }
+    .controls { margin-bottom: 1rem; }
+    button { margin-right: 0.5rem; }
+  </style>
+</head>
+<body>
+  <h2>Community Events</h2>
+
+  <div class="controls">
+    <label for="categoryFilter">Filter by Category:</label>
+    <select id="categoryFilter">
+      <option value="all">All</option>
+      <option value="music">Music</option>
+      <option value="tech">Tech</option>
+      <option value="cooking">Cooking</option>
+    </select>
+
+    <input type="text" id="searchBox" placeholder="Search by name..." />
+  </div>
+
+  <div id="eventsContainer"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>

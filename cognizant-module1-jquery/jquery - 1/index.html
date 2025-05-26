@@ -1,0 +1,42 @@
+<!-- Exercise 1: Adding jQuery to a Page (CDN + Local) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Inclusion Methods</title>
+  
+  <!-- Method 1: Include jQuery via CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <!-- Method 2: Include jQuery Locally (uncomment to use locally downloaded version) -->
+  <!-- <script src="js/jquery-3.6.4.min.js"></script> -->
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+      padding: 40px;
+      text-align: center;
+    }
+    p {
+      font-size: 1.5rem;
+      color: #2c3e50;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📘 jQuery Exercise 1: Library Inclusion</h1>
+  <p id="hello">Hello World!</p>
+
+  <script>
+    // Wait for the document to be ready
+    $(document).ready(function () {
+      // Log the Hello World paragraph to the console
+      console.log($("#hello").text());
+    });
+  </script>
+</body>
+</html>

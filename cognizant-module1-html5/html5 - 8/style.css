@@ -1,0 +1,78 @@
+/* Reset & base */
+body, html {
+  margin: 0; padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 40px 50px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 350px;
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.highlight {
+  color: #ffd700; /* Gold */
+  text-shadow: 0 0 8px #ffd700aa;
+}
+
+.label {
+  display: block;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #f0f8ff;
+}
+
+.select-menu {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: #ffffffdd;
+  color: #333;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
+  margin-bottom: 25px;
+}
+
+.select-menu:hover, .select-menu:focus {
+  background: #f9f9f9;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn-clear {
+  background: #ff4d6d;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #ff4d6dcc;
+  transition: background 0.3s ease;
+}
+
+.btn-clear:hover {
+  background: #e43f5a;
+  box-shadow: 0 6px 20px #e43f5acc;
+}

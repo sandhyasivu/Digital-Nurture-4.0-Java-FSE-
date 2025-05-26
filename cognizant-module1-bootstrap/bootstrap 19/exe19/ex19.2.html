@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap 5 Custom Sass Demo</title>
+  <link rel="stylesheet" href="dist/css/custom.css" />
+</head>
+<body class="bg-light">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-5" style="border-radius: 1.5rem;">
+    <div class="container">
+      <a class="navbar-brand" href="#">MyBrand</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1 class="text-primary mb-4">Welcome to Bootstrap Customized with Sass</h1>
+
+    <button class="btn btn-primary rounded-pill mb-3">Primary Button</button>
+
+    <div class="card shadow" style="border-radius: 1.5rem;">
+      <div class="card-body">
+        <h5 class="card-title">Card with Custom Border Radius</h5>
+        <p class="card-text">
+          This card demonstrates the customized primary color and increased border radius configured via Sass variables.
+        </p>
+        <a href="#" class="btn btn-secondary rounded-pill">Secondary Button</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap Bundle JS (required for navbar toggler) -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

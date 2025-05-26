@@ -1,0 +1,80 @@
+<!-- Exercise 6: jQuery Event Helpers -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 6: Mouse and Keyboard Events</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      padding: 40px;
+      text-align: center;
+    }
+    #eventBox {
+      width: 300px;
+      height: 150px;
+      margin: 30px auto;
+      background-color: #ffffff;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s;
+    }
+    #logArea {
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #555;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 1rem;
+      margin-top: 30px;
+      width: 250px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 Event Helpers Demo</h1>
+  <div id="eventBox">Hover, Click or Double Click Me</div>
+  <div id="logArea">Waiting for events...</div>
+  <input type="text" id="keyInput" placeholder="Type something here..." />
+
+  <script>
+    $(document).ready(function () {
+      // Click event
+      $("#eventBox").click(function () {
+        $(this).css("background-color", "#ffeb3b");
+        $("#logArea").text("Box clicked!");
+      });
+
+      // Double-click event
+      $("#eventBox").dblclick(function () {
+        $(this).css("background-color", "#4caf50");
+        $("#logArea").text("Box double-clicked!");
+      });
+
+      // Mouse enter event
+      $("#eventBox").mouseenter(function () {
+        $(this).css("background-color", "#e3f2fd");
+        $("#logArea").text("Mouse entered box");
+      });
+
+      // Mouse leave event
+      $("#eventBox").mouseleave(function () {
+        $(this).css("background-color", "#ffffff");
+        $("#logArea").text("Mouse left box");
+      });
+
+      // Keypress event
+      $("#keyInput").keypress(function (e) {
+        $("#logArea").text("Key pressed: " + String.fromCharCode(e.which));
+      });
+    });
+  </script>
+</body>
+</html>

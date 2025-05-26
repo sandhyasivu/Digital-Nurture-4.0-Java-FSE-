@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Community Event Portal</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="main-nav">
+    <div class="container">
+      <h1 class="logo">CityEvents</h1>
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section" id="home">
+    <div class="container">
+      <h2 id="mainHeader">Welcome to Your City's Community Events</h2>
+      <p class="subtitle">Connect. Celebrate. Contribute.</p>
+      <a href="#register" class="cta-button">Get Involved</a>
+    </div>
+  </header>
+
+  <!-- Events Section -->
+  <section id="events" class="section">
+    <div class="container">
+      <h2 class="section-title">Upcoming Events</h2>
+      <div class="event-grid">
+        <div class="eventCard">
+          <h3>Spring Food Festival</h3>
+          <p>Enjoy flavors from around the world in a day full of fun, music, and delicious food.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="eventCard">
+          <h3>Yoga in the Park</h3>
+          <p>Relax your body and mind with our morning yoga session, suitable for all age groups.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="eventCard">
+          <h3>Art and Craft Expo</h3>
+          <p>Showcase your talent or admire others' at the community's biggest art fair of the year.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Section -->
+  <section id="register" class="section register-section">
+    <div class="container">
+      <h2 class="section-title">Register for an Event</h2>
+      <form class="register-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Your name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="you@example.com" required />
+
+        <label for="event">Select Event:</label>
+        <select id="event" required>
+          <option value="">--Choose an event--</option>
+          <option value="food">Spring Food Festival</option>
+          <option value="yoga">Yoga in the Park</option>
+          <option value="art">Art and Craft Expo</option>
+        </select>
+
+        <button type="submit" class="cta-button">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <p>If you have questions or want to contribute, feel free to contact us at <a href="mailto:info@cityevents.com">info@cityevents.com</a>.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+      <p>&copy; 2025 CityEvents. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

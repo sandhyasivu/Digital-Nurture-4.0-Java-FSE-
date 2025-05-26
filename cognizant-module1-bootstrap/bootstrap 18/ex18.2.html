@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 18.2 - Bootstrap Accordion Example</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      background-color: #eef2f7;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    main {
+      flex: 1 0 auto;
+      max-width: 720px;
+      margin: 2rem auto 3rem;
+      padding: 0 1rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 class="display-5 text-info">Bootstrap 5 Accordion Component Demo</h1>
+  <p class="lead">Click the accordion headers below to expand or collapse content sections.</p>
+</header>
+
+<main>
+
+  <div class="accordion shadow-sm" id="servicesAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Web Development Services
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#servicesAccordion">
+        <div class="accordion-body bg-light">
+          We offer responsive, SEO-friendly, and performance-optimized websites tailored to your needs.
+          Technologies include Bootstrap 5, React, Angular, and more.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item mt-3">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed bg-success text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Cloud & Hosting Solutions
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#servicesAccordion">
+        <div class="accordion-body bg-light">
+          Our cloud services guarantee uptime, scalability, and top-tier security for your applications and data.
+          Choose AWS, Azure, or Google Cloud options.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item mt-3">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed bg-warning text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Mobile App Development
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#servicesAccordion">
+        <div class="accordion-body bg-light">
+          Building cross-platform mobile apps using Flutter, React Native, or native iOS/Android with excellent UX design.
+          Increase your reach on all devices.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item mt-3">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed bg-info text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Support & Maintenance
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#servicesAccordion">
+        <div class="accordion-body bg-light">
+          24/7 dedicated support team ready to assist with troubleshooting, updates, and monitoring your systems.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="mt-5 text-center">
+    <button id="expandAll" class="btn btn-outline-primary me-3">Expand All</button>
+    <button id="collapseAll" class="btn btn-outline-secondary">Collapse All</button>
+  </section>
+
+</main>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Accordion collapse/expand all controls
+  const expandAllBtn = document.getElementById('expandAll');
+  const collapseAllBtn = document.getElementById('collapseAll');
+  const accordionItems = document.querySelectorAll('.accordion-collapse');
+
+  expandAllBtn.addEventListener('click', () => {
+    accordionItems.forEach(item => {
+      const bsCollapse = bootstrap.Collapse.getOrCreateInstance(item);
+      bsCollapse.show();
+    });
+  });
+
+  collapseAllBtn.addEventListener('click', () => {
+    accordionItems.forEach(item => {
+      const bsCollapse = bootstrap.Collapse.getOrCreateInstance(item);
+      bsCollapse.hide();
+    });
+  });
+</script>
+
+</body>
+</html>

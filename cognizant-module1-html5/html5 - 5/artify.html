@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Registration - Local Community Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fafb;
+      margin: 40px;
+      color: #333;
+    }
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    form {
+      max-width: 480px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 18px;
+      border: 1.8px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="date"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #2980b9;
+      outline: none;
+      background-color: #eaf4fd;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    button {
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      width: 100%;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #1c5980;
+    }
+    output {
+      display: block;
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #27ae60;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Register for an Event</h2>
+
+  <form id="registrationForm">
+    <label for="name">Full Name:</label>
+    <input 
+      type="text" 
+      id="name" 
+      name="name" 
+      placeholder="Enter your full name" 
+      required 
+      autofocus
+    />
+
+    <label for="email">Email Address:</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      placeholder="name@example.com" 
+      required
+    />
+
+    <label for="eventDate">Select Event Date:</label>
+    <input 
+      type="date" 
+      id="eventDate" 
+      name="eventDate" 
+      required
+    />
+
+    <label for="eventType">Event Type:</label>
+    <select id="eventType" name="eventType" required>
+      <option value="" disabled selected>Select an event type</option>
+      <option value="festival">Spring Festival</option>
+      <option value="music">Music Night</option>
+      <option value="artfair">Community Art Fair</option>
+      <option value="heritage">Heritage Walk</option>
+      <option value="treeplant">Tree Plantation Drive</option>
+    </select>
+
+    <label for="message">Additional Message:</label>
+    <textarea 
+      id="message" 
+      name="message" 
+      placeholder="Write any special requirements or questions here..."
+    ></textarea>
+
+    <button type="submit">Submit Registration</button>
+
+    <output id="confirmation" name="confirmation"></output>
+  </form>
+
+  <script>
+    // JavaScript to handle form submission and output confirmation message
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // prevent default form submission behavior
+
+      // Get form values
+      const name = this.name.value.trim();
+      const email = this.email.value.trim();
+      const date = this.eventDate.value;
+      const eventType = this.eventType.options[this.eventType.selectedIndex].text;
+
+      // Compose confirmation message
+      const message = `Thank you, ${name}! Your registration for "${eventType}" on ${date} has been received. A confirmation email will be sent to ${email}.`;
+
+      // Display message in output element
+      this.confirmation.value = message;
+
+      // Optionally, reset the form
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>

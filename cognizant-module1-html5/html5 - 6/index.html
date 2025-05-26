@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Feedback - Interactive Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h2>Event Feedback Form</h2>
+
+  <form id="feedbackForm">
+
+    <label for="phone">Phone Number:</label>
+    <input 
+      type="text" 
+      id="phone" 
+      name="phone" 
+      placeholder="Enter 10-digit phone number" 
+      required
+    />
+    <div id="phoneError"></div>
+
+    <label for="eventSelect">Select Event:</label>
+    <select id="eventSelect" name="eventSelect" required>
+      <option value="" disabled selected>Select an event</option>
+      <option value="festival" data-fee="100">Spring Festival</option>
+      <option value="music" data-fee="150">Music Night</option>
+      <option value="artfair" data-fee="120">Community Art Fair</option>
+      <option value="heritage" data-fee="80">Heritage Walk</option>
+      <option value="treeplant" data-fee="50">Tree Plantation Drive</option>
+    </select>
+    <div id="eventFee"></div>
+
+    <label for="feedback">Your Feedback:</label>
+    <textarea 
+      id="feedback" 
+      name="feedback" 
+      placeholder="Write your feedback here..." 
+      rows="5" 
+      maxlength="250"
+    ></textarea>
+    <div id="charCount">Characters typed: 0 / 250</div>
+
+    <button type="button" id="submitBtn">Submit Feedback</button>
+
+    <div id="confirmation"></div>
+  </form>
+
+  <img 
+    id="eventImage" 
+    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" 
+    alt="Community Event" 
+    title="Double-click to enlarge"
+  />
+
+  <script src="script.js"></script>
+</body>
+</html>

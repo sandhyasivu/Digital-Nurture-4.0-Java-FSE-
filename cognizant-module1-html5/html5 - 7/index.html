@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Promo Video</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h2>Community Event Promo</h2>
+
+  <video id="promoVideo" width="640" height="360" controls>
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm" />
+    Your browser does not support the video tag.
+  </video>
+
+  <div id="videoStatus"></div>
+
+  <form id="eventForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter your email" required />
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>

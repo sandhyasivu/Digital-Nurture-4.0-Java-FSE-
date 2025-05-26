@@ -1,0 +1,63 @@
+/* Body styling with fallback color and background image */
+body {
+  background-color: #1E2A38; /* fallback: dark blue-gray */
+  background-image: url('cityscape.jpg'); /* make sure this image exists */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgba(255, 255, 255, 0.9); /* white with 90% opacity for readability */
+  margin: 0;
+  padding: 20px;
+}
+
+/* Section headers with linear gradient background */
+section h2 {
+  background: linear-gradient(90deg, #0047AB, #00A9E0); /* city council blue gradient */
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* Paragraphs with RGBA for subtle color */
+section p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Buttons with HEX colors and subtle hover gradient */
+button.primary-btn {
+  background-color: #0072CE; /* HEX city blue */
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 114, 206, 0.5);
+}
+
+button.primary-btn:hover {
+  background: linear-gradient(45deg, #0047AB, #00A9E0);
+  box-shadow: 0 4px 12px rgba(0, 169, 224, 0.7);
+}
+
+/* Footer with semi-transparent dark background */
+footer {
+  background-color: rgba(30, 42, 56, 0.85);
+  color: #cbd3dc;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #0047AB;
+  margin-top: 40px;
+  border-radius: 8px 8px 0 0;
+}

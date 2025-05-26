@@ -1,0 +1,89 @@
+<!-- Exercise 3: jQuery Methods and Effects -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 3: jQuery Methods</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f8ff;
+      padding: 30px;
+      text-align: center;
+    }
+    .box {
+      width: 150px;
+      height: 150px;
+      margin: 20px;
+      display: inline-block;
+      background-color: #3498db;
+      border-radius: 10px;
+    }
+    .controls {
+      margin: 20px auto;
+    }
+    .controls button {
+      margin: 5px;
+      padding: 10px 15px;
+      font-size: 1rem;
+      border: none;
+      background-color: #2ecc71;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .controls button:hover {
+      background-color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎯 jQuery Common Methods</h1>
+
+  <div class="controls">
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="fadeOut">Fade Out</button>
+    <button id="fadeIn">Fade In</button>
+    <button id="toggle">Toggle</button>
+    <button id="chain">Chain Effect</button>
+  </div>
+
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+
+  <script>
+    $(document).ready(function () {
+      $("#hide").click(function () {
+        $(".box").hide();
+      });
+
+      $("#show").click(function () {
+        $(".box").show();
+      });
+
+      $("#fadeOut").click(function () {
+        $(".box").fadeOut();
+      });
+
+      $("#fadeIn").click(function () {
+        $(".box").fadeIn();
+      });
+
+      $("#toggle").click(function () {
+        $(".box").toggle();
+      });
+
+      // Bonus: Chain methods
+      $("#chain").click(function () {
+        $(".box").slideUp(500).delay(1000).slideDown(500);
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+/* Universal selector - reset margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body base styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #f0f4f8 0%, #d9e2ec 100%);
+  color: #333;
+  padding: 30px;
+  min-height: 100vh;
+}
+
+/* ID selector - banner styling */
+#mainHeader {
+  background-color: #005f73;
+  color: #e0fbfc;
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+/* Element selector - style all h2 */
+h2 {
+  font-size: 2rem;
+  color: #0a9396;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #94d2bd;
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+/* Class selector - event container card */
+.eventCard {
+  background-color: #ffffff;
+  border-left: 6px solid #ee6c4d;
+  box-shadow: 0 4px 8px rgba(238, 108, 77, 0.2);
+  border-radius: 8px;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.eventCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(238, 108, 77, 0.35);
+}
+
+/* Grouping selector - style h3 and p together */
+h3, p {
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Specific h3 styling */
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #ee6c4d;
+}
+
+/* Specific p styling */
+p {
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+  #mainHeader {
+    font-size: 1.5rem;
+    padding: 25px 15px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .eventCard {
+    padding: 15px 20px;
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 15.2 - Card with Shadows and Rounded Pill</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: #e9ecef;
+      padding: 3rem 1rem;
+    }
+    .container {
+      max-width: 600px;
+    }
+    .custom-card {
+      background: white;
+      padding: 2rem;
+      margin: 2rem auto;
+      border-radius: 50rem; /* For demonstration, pill shape */
+      transition: box-shadow 0.3s ease;
+    }
+    .custom-card:hover {
+      box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,0.25);
+    }
+    .card-title {
+      font-weight: 700;
+      color: #343a40;
+    }
+    .btn-pill {
+      border-radius: 50rem !important;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container text-center">
+
+    <h2 class="mb-5">Bootstrap Shadow and Rounded Pill Card</h2>
+
+    <!-- Card with default shadow -->
+    <div class="card shadow mb-4 custom-card">
+      <div class="card-body">
+        <h3 class="card-title">Shadow Card</h3>
+        <p class="card-text">
+          This card uses <code>shadow</code> utility for a subtle shadow effect.
+        </p>
+        <button class="btn btn-primary btn-pill px-4">Learn More</button>
+      </div>
+    </div>
+
+    <!-- Card with large shadow -->
+    <div class="card shadow-lg mb-4 custom-card">
+      <div class="card-body">
+        <h3 class="card-title">Large Shadow Card</h3>
+        <p class="card-text">
+          This card uses <code>shadow-lg</code> utility for a stronger shadow effect.
+        </p>
+        <button class="btn btn-success btn-pill px-5">Get Started</button>
+      </div>
+    </div>
+
+    <!-- Pill shaped card with shadow-lg and bg-light -->
+    <div class="card shadow-lg mb-4 custom-card bg-light">
+      <div class="card-body">
+        <h3 class="card-title">Pill Shaped Card</h3>
+        <p class="card-text">
+          This card is <code>rounded-pill</code> with large shadow, great for call-to-action sections.
+        </p>
+        <button class="btn btn-danger btn-pill px-5">Subscribe Now</button>
+      </div>
+    </div>
+
+    <p class="text-muted mt-5">
+      The Bootstrap utilities used here are:<br />
+      <code>shadow</code>, <code>shadow-lg</code>, and <code>rounded-pill</code>.<br />
+      Rounded-pill creates fully rounded corners, ideal for buttons and cards with pill shape.<br />
+      Shadows add depth and emphasis on hover or focus.
+    </p>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

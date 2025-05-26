@@ -1,0 +1,57 @@
+<!-- Exercise 2: jQuery $() Function - Selecting Elements -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 2: jQuery Selectors</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: linear-gradient(to right, #fdfbfb, #ebedee);
+      text-align: center;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="main-heading">Original Heading</h1>
+  <p>This paragraph will remain visible.</p>
+  <p id="hide-me">This paragraph will be hidden when you click the button.</p>
+  <button id="hide-button">Click to Hide a Paragraph</button>
+
+  <script>
+    $(document).ready(function () {
+      // Change the heading text
+      $("#main-heading").text("Updated Heading using jQuery");
+
+      // Hide one paragraph when the button is clicked
+      $("#hide-button").click(function () {
+        $("#hide-me").hide();
+      });
+    });
+  </script>
+
+</body>
+</html>
